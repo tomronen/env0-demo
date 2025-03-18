@@ -87,3 +87,7 @@ variable "Objective" {
   description = "Objective of the project"
   type        = string
 }
+
+variable "region" {
+  type = string
+}
