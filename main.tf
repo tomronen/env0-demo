@@ -27,3 +27,7 @@ module "compute" {
   common_tags          = local.common_tags
 }
 
+output "another_instance_public_ip" {
+  description = "Public IP of the another EC2 instance"
+  value       = module.compute.another_instance_public_ip
+}

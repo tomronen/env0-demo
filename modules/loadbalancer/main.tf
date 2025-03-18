@@ -68,4 +68,10 @@ resource "aws_lb_target_group_attachment" "web" {
   target_group_arn = aws_lb_target_group.web.arn
   target_id        = var.instance_id
   port             = 80
-} 
+}
+
+resource "aws_lb_target_group_attachment" "another_instance" {
+  target_group_arn = aws_lb_target_group.web.arn
+  target_id        = var.another_instance_id
+  port             = 80
+}
